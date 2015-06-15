@@ -11,6 +11,7 @@ var DIR_OUT = 'dist/js';
 var APP_FILE = 'js/app.js';
 var OUT_FILE = 'main.js';
 var OUT_FILE_MIN = 'main.min.js';
+var DEV_SERVER = "localhost:8000";
 
 
 gulp.task('js', function () {
@@ -42,7 +43,7 @@ gulp.task('js-watch', ['lint', 'js'], function(){
 gulp.task('serve', ['js'], function () {
     // Proxy to django dev server
     browserSync({
-        proxy: "localhost:8000"
+        proxy: DEV_SERVER
     });
     // add browserSync.reload to the tasks array to make
     gulp.watch(DIR_IN, ['js-watch']);
