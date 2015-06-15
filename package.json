@@ -1,7 +1,7 @@
 {
   "name": "browsersync",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. Install dependencies ``` npm install ``` 2. Start dev server on port 8000 ``` $python -m SimpleHTTPServer # When using django $python manage.py runserver  ``` 3. Start browsersync: ``` gulp serve ```",
   "main": "gulpfile.js",
   "dependencies": {
     "babelify": "^6.1.2",
@@ -14,13 +14,25 @@
     "react": "^0.13.3"
   },
   "devDependencies": {
+    "babel-eslint": "^3.1.15",
     "browser-sync": "^2.7.10",
+    "eslint": "^0.23.0",
+    "eslint-plugin-react": "^2.5.2",
     "esprima-fb": "^15001.1.0-dev-harmony-fb",
-    "gulp-jscs": "^1.6.0"
+    "gulp-babel": "^5.1.0",
+    "gulp-eslint": "^0.14.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tax/browsersynctest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tax/browsersynctest/issues"
+  },
+  "homepage": "https://github.com/tax/browsersynctest"
 }
