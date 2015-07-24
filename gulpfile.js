@@ -17,14 +17,14 @@ var DEV_SERVER = "localhost:8000";
 gulp.task('js', function () {
   return gulp.src(APP_FILE)
     .pipe(concat(OUT_FILE))
-    .pipe(browserify({transform: [babelify]}))
+    .pipe(browserify({transform: [babelify], extensions: ['.jsx']}))
     .pipe(gulp.dest(DIR_OUT));
 });
 
 gulp.task('js-minify', function () {
   return gulp.src(APP_FILE)
     .pipe(concat(OUT_FILE_MIN))
-    .pipe(browserify({transform: [babelify]}))
+    .pipe(browserify({transform: [babelify], extensions: ['.jsx']}))
     .pipe(uglify())
     .pipe(gulp.dest(DIR_OUT));
 });
